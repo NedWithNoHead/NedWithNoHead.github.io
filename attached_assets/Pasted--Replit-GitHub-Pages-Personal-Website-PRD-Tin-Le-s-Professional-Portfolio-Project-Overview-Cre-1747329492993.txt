@@ -1,0 +1,216 @@
+# Replit/GitHub Pages Personal Website PRD: Tin Le's Professional Portfolio
+
+## Project Overview
+Create a sleek, modern personal website that showcases Tin's unique ability to bridge business and technical domains. The site should emphasize his dual expertise in financial analysis and computer technology, with a professional dark-themed design (with light mode toggle) that appeals to both business and technical audiences.
+
+## Technical Requirements
+
+### Platform Compatibility
+- **GitHub Pages Compatible**: Site must be built using static site technologies that are fully compatible with GitHub Pages hosting
+- **No server-side dependencies**: All functionality must work without backend processing
+- **Static Site Generation**: Consider using Jekyll (natively supported by GitHub Pages) or pre-built static exports from other frameworks
+
+### Social Media Integration
+- **Open Graph Protocol**: Implement OpenGraph `<meta>` tags for rich previews on social platforms
+- **Twitter Card Metadata**: Include Twitter card meta tags for optimized Twitter sharing
+- **Preview Image**: Create custom preview image (1200×630px recommended) showcasing profile and name
+- **Custom Descriptions**: Include compelling description meta tags that summarize professional identity
+- **Favicon Set**: Include complete favicon set for various platforms and devices
+
+## Content Structure
+
+### Navigation
+- Clean, sticky navigation with smooth scrolling
+- Sections: About, Timeline, Projects, Skills, Contact
+- Social links: LinkedIn and GitHub icons
+- Dark/light mode toggle
+
+### Hero Section
+```
+Title: Hi, I'm Tin Le
+Subtitle: Bridging Business Intelligence & Technology
+Description: I transform complex business challenges into elegant technical solutions. With a background spanning financial analysis and computer science, I specialize in translating business requirements into data-driven insights that empower decision-makers to act with confidence. My passion lies in making technology work for people, not the other way around.
+Buttons: View Resume, LinkedIn, GitHub
+```
+
+### About Me Section
+```
+I thrive at the intersection of business and technology, bringing a unique perspective that combines financial acumen with technical expertise. As a Computer Information Technology graduate with a strong foundation in Business Administration, I've built a career translating complex business needs into elegant technological solutions.
+
+My journey from financial analysis to data engineering has equipped me with the rare ability to communicate effectively across departments, understand stakeholder requirements at their core, and implement systems that drive measurable business results.
+
+Whether optimizing database performance, automating financial processes, or creating insightful dashboards that inform critical decisions, I'm committed to delivering solutions that enhance operational efficiency and provide meaningful business intelligence.
+```
+
+### Skills Section (Collapsible Categories)
+Create three collapsible sections:
+
+1. **Data Skills** (expandable)
+   - Power BI, SQL Server, Tableau
+   - ETL Pipeline Development
+   - Statistical Analysis & Data Modeling
+   - Data Visualization & Dashboard Design
+   - MySQL, Database Optimization
+   - Data Integrity & Validation
+
+2. **Business Analysis** (expandable)
+   - Requirements Gathering & Process Modeling
+   - ERP Implementation & Integration
+   - Stakeholder Management & Communication
+   - UAT Strategy & Test Case Development
+   - Technical Documentation
+   - Project Performance Evaluation
+   - Financial Analysis & Reporting
+
+3. **Technical Expertise** (expandable)
+   - Python, SQL, JavaScript
+   - AWS, Azure Cloud Platforms
+   - Docker, Kubernetes, Containerization
+   - CI/CD Pipelines (Jenkins, GitLab)
+   - Terraform, Infrastructure as Code
+   - Git Version Control
+   - Linux Administration
+
+### Timeline Section
+Implement a vertical timeline with clear organization:
+
+```
+[2024] - BCIT Graduation
+- Computer Information Technology Diploma (94% GPA)
+- Specialized in data analysis, cloud technologies, and systems development
+
+[Jan 2024 - Aug 2024] - BC Liquor Distribution Branch
+- Project Analyst (Co-op)
+- Selected as top 15% of students for competitive placement
+- Developed Power BI dashboards and Python automation solutions
+- Led data quality testing and validation framework implementation
+- Website: https://www.bcldb.com/
+
+[2022] - Career Transition to Technology
+- Enrolled in Computer Information Technology program at BCIT
+- Began specializing in data systems and business technology solutions
+
+[Feb 2017 - Aug 2022] - Fujinet Systems JSC
+- Website: https://fujinet.net/
+
+  • Financial Data Analyst
+    Led data-driven financial reporting and analysis across business units
+    Developed and maintained database systems for financial tracking
+    Created executive dashboards reducing reporting cycles by 40%
+    Managed portfolio optimization generating $550K in revenue
+
+  • Business Systems Analyst
+    Spearheaded ERP implementation and integration
+    Designed and implemented automated business processes
+    Led requirements gathering and system testing
+    Served as technical liaison between development and business teams
+
+[2016] - State University of New York at Buffalo
+- Bachelor of Science in Business Administration
+- Dual concentration: Management Information Systems and Financial Analysis
+- Foundation in both business principles and information systems
+- Website: https://www.buffalo.edu/
+```
+
+### Projects Section
+Use modern card layout with consistent information architecture:
+
+```
+[Project 1]
+Title: Space Explorer
+Description: Interactive visualization platform exploring astronomical data and celestial objects in a user-friendly interface for educational and reference purposes.
+Technologies: React, ThreeJS, NASA API
+Link: https://space-explorer.cloud/
+GitHub: https://github.com/NedWithNoHead/SpaceExplorer
+Image: [Space visualization image]
+
+[Project 2]
+Title: HomeDecide
+Description: Financial decision tool that analyzes the buy vs. rent question through data modeling, helping users make informed housing decisions based on market conditions and personal finances.
+Technologies: Python, Streamlit, Pandas, Plotly
+Link: https://nedwithnohead-homedecide--8501.prod1a.defang.dev/
+GitHub: https://github.com/NedWithNoHead/HomeDecide
+Image: [Real estate analysis image]
+
+[Project 3]
+Title: Runify - Event Processing System
+Description: High-performance microservices architecture handling 1000+ concurrent events through asynchronous processing, demonstrating enterprise-level system design principles.
+Technologies: Python, Kafka, Docker, Azure VM
+GitHub: https://github.com/NedWithNoHead/Runify
+Image: [Event processing workflow image]
+
+[Project 4]
+Title: AWS Multi-Region Deployment
+Description: Cloud-native application with infrastructure as code implementation, featuring high availability architecture and automated scaling across multiple AWS regions.
+Technologies: Terraform, AWS, CloudWatch, MySQL
+GitHub: https://github.com/NedWithNoHead/chat_service_provisioning
+Image: [Cloud architecture image]
+
+[Project 5]
+Title: Enterprise Media Server
+Description: Production-grade home lab implementation demonstrating enterprise architecture principles with containerization, redundancy, and monitoring for 10+ concurrent users.
+Technologies: Docker Compose, RAID, Linux, Networking
+GitHub: https://github.com/NedWithNoHead/DockerStreamingService
+Image: [Server architecture image]
+```
+
+### Contact Section
+```
+Title: Let's Connect
+Description: I'm always interested in discussing challenging problems at the intersection of business and technology. Whether you have a project in mind or just want to connect, feel free to reach out.
+Email: jackletrungtin@gmail.com
+Social Links: LinkedIn, GitHub
+```
+
+## Design Specifications
+
+### Visual Theme
+- Professional dark theme as default (with light theme toggle)
+- Color scheme: Deep navy/indigo with accent colors
+- Typography: Clean sans-serif (Inter or Roboto recommended)
+- Subtle animations for transitions and interactions
+- Generous whitespace for readability
+
+### Component Design
+- **Timeline**: Vertical format with connected nodes, clear visual distinction between education and professional experiences
+- **Skills**: Interactive accordion-style collapsible sections with smooth expand/collapse animations
+- **Project Cards**: Consistent aspect ratio with hover effects showing additional details/links
+- **Navigation**: Subtle highlight for active section
+
+### Responsive Design
+- Fully responsive across all devices
+- Mobile-first approach with optimized layouts for each breakpoint
+- Touch-friendly interactive elements on mobile
+- Simplified navigation on smaller screens
+
+### SEO & Social Media Optimization
+- **Meta Description**: Create compelling meta description highlighting expertise
+- **Open Graph Protocol**: Include full OG tag set:
+  ```html
+  <meta property="og:title" content="Tin Le | Business Intelligence & Technology Specialist" />
+  <meta property="og:description" content="Bridging business requirements and technical solutions with expertise in data analytics, BI, and systems implementation." />
+  <meta property="og:image" content="https://tinle.xyz/images/social-preview.jpg" />
+  <meta property="og:url" content="https://tinle.xyz" />
+  <meta property="og:type" content="profile" />
+  ```
+- **Twitter Card**:
+  ```html
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tin Le | Business Intelligence & Technology Specialist">
+  <meta name="twitter:description" content="Bridging business requirements and technical solutions with expertise in data analytics, BI, and systems implementation.">
+  <meta name="twitter:image" content="https://tinle.xyz/images/social-preview.jpg">
+  ```
+- **Social Preview Image**: Create professional branded preview image (1200×630px)
+
+## Technical Implementation Notes
+
+- **Static Site Generation**: Use Jekyll or pre-rendered HTML/CSS/JS only
+- **GitHub Pages Compatibility**: Ensure all functionality works without server-side processing
+- **Client-Side Only**: Implement all interactivity using vanilla JavaScript or minimal frameworks
+- **Asset Optimization**: Compress and optimize all images and assets
+- **Local Storage**: Use localStorage for theme preference
+- **No External APIs**: Ensure all functionality works without external API calls (except for optional analytics)
+- Implement smooth scrolling between sections
+- SEO-optimized metadata
+- Accessible design with proper ARIA attributes and keyboard navigation
+- Include schema.org structured data for professional information
