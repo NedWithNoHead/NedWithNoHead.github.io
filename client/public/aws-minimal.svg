@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>AWS Cloud Architecture</title>
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#232F3E"/>
+            <stop offset="100%" stop-color="#0F1B2A"/>
+        </linearGradient>
+        <linearGradient id="awsOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF9900"/>
+            <stop offset="100%" stop-color="#FFC400"/>
+        </linearGradient>
+        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#2563EB"/>
+            <stop offset="100%" stop-color="#3B82F6"/>
+        </linearGradient>
+        <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#059669"/>
+            <stop offset="100%" stop-color="#10B981"/>
+        </linearGradient>
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" result="blur"/>
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="800" height="600" fill="url(#bgGradient)"/>
+    
+    <!-- AWS Global Network -->
+    <g id="network" opacity="0.15">
+        <path d="M0,300 C100,200 300,150 400,300 C500,450 700,400 800,300" stroke="#4B5563" stroke-width="1" fill="none" />
+        <path d="M0,350 C150,300 250,400 400,350 C550,300 650,400 800,350" stroke="#4B5563" stroke-width="1" fill="none" />
+        <path d="M0,250 C150,350 250,200 400,250 C550,300 650,200 800,250" stroke="#4B5563" stroke-width="1" fill="none" />
+        
+        <line x1="100" y1="0" x2="100" y2="600" stroke="#4B5563" stroke-width="0.5" />
+        <line x1="200" y1="0" x2="200" y2="600" stroke="#4B5563" stroke-width="0.5" />
+        <line x1="300" y1="0" x2="300" y2="600" stroke="#4B5563" stroke-width="0.5" />
+        <line x1="400" y1="0" x2="400" y2="600" stroke="#4B5563" stroke-width="0.5" />
+        <line x1="500" y1="0" x2="500" y2="600" stroke="#4B5563" stroke-width="0.5" />
+        <line x1="600" y1="0" x2="600" y2="600" stroke="#4B5563" stroke-width="0.5" />
+        <line x1="700" y1="0" x2="700" y2="600" stroke="#4B5563" stroke-width="0.5" />
+    </g>
+    
+    <!-- Region 1 -->
+    <g id="region1">
+        <rect x="150" y="150" width="200" height="300" rx="10" stroke="#FF9900" stroke-width="2" fill="#232F3E" fill-opacity="0.4" />
+        
+        <!-- EC2 Instances -->
+        <g id="ec2-1" transform="translate(250, 200)">
+            <rect x="-40" y="-30" width="80" height="60" rx="5" fill="url(#blueGradient)" />
+            <rect x="-30" y="-20" width="60" height="10" rx="2" fill="#F1F5F9" opacity="0.3" />
+            <rect x="-30" y="-5" width="60" height="10" rx="2" fill="#F1F5F9" opacity="0.3" />
+            <rect x="-30" y="10" width="60" height="10" rx="2" fill="#F1F5F9" opacity="0.3" />
+            
+            <!-- Pulse Animation -->
+            <circle cx="0" cy="0" r="50" stroke="#3B82F6" stroke-width="1" fill="none">
+                <animate attributeName="r" values="50;60;50" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.7;0;0.7" dur="3s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+        
+        <!-- S3 Bucket -->
+        <g id="s3-1" transform="translate(250, 350)">
+            <path d="M-30,-30 L0,-50 L30,-30 L30,30 L-30,30 Z" fill="url(#awsOrange)" />
+            <rect x="-20" y="-15" width="40" height="8" rx="2" fill="#F1F5F9" opacity="0.3" />
+            <rect x="-20" y="0" width="40" height="8" rx="2" fill="#F1F5F9" opacity="0.3" />
+            <rect x="-20" y="15" width="40" height="8" rx="2" fill="#F1F5F9" opacity="0.3" />
+            
+            <!-- Pulse Animation -->
+            <circle cx="0" cy="0" r="50" stroke="#FF9900" stroke-width="1" fill="none">
+                <animate attributeName="r" values="50;60;50" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.7;0;0.7" dur="4s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+    </g>
+    
+    <!-- Region 2 -->
+    <g id="region2">
+        <rect x="450" y="150" width="200" height="300" rx="10" stroke="#FF9900" stroke-width="2" fill="#232F3E" fill-opacity="0.4" />
+        
+        <!-- EC2 Instances -->
+        <g id="ec2-2" transform="translate(550, 200)">
+            <rect x="-40" y="-30" width="80" height="60" rx="5" fill="url(#blueGradient)" />
+            <rect x="-30" y="-20" width="60" height="10" rx="2" fill="#F1F5F9" opacity="0.3" />
+            <rect x="-30" y="-5" width="60" height="10" rx="2" fill="#F1F5F9" opacity="0.3" />
+            <rect x="-30" y="10" width="60" height="10" rx="2" fill="#F1F5F9" opacity="0.3" />
+            
+            <!-- Pulse Animation -->
+            <circle cx="0" cy="0" r="50" stroke="#3B82F6" stroke-width="1" fill="none">
+                <animate attributeName="r" values="50;60;50" dur="3.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.7;0;0.7" dur="3.5s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+        
+        <!-- S3 Bucket -->
+        <g id="s3-2" transform="translate(550, 350)">
+            <path d="M-30,-30 L0,-50 L30,-30 L30,30 L-30,30 Z" fill="url(#awsOrange)" />
+            <rect x="-20" y="-15" width="40" height="8" rx="2" fill="#F1F5F9" opacity="0.3" />
+            <rect x="-20" y="0" width="40" height="8" rx="2" fill="#F1F5F9" opacity="0.3" />
+            <rect x="-20" y="15" width="40" height="8" rx="2" fill="#F1F5F9" opacity="0.3" />
+            
+            <!-- Pulse Animation -->
+            <circle cx="0" cy="0" r="50" stroke="#FF9900" stroke-width="1" fill="none">
+                <animate attributeName="r" values="50;60;50" dur="4.5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.7;0;0.7" dur="4.5s" repeatCount="indefinite"/>
+            </circle>
+        </g>
+    </g>
+    
+    <!-- CloudFront -->
+    <g id="cloudfront" transform="translate(400, 100)">
+        <circle cx="0" cy="0" r="40" fill="url(#awsOrange)" />
+        <path d="M-15,-15 L15,-15 L15,15 L-15,15 Z" fill="#F1F5F9" opacity="0.3" transform="rotate(45)" />
+        
+        <!-- Beams Animation -->
+        <g opacity="0.7">
+            <path d="M0,0 L-120,100" stroke="#FF9900" stroke-width="2" stroke-dasharray="2,3">
+                <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2s" repeatCount="indefinite"/>
+            </path>
+            <path d="M0,0 L120,100" stroke="#FF9900" stroke-width="2" stroke-dasharray="2,3">
+                <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.3s" repeatCount="indefinite"/>
+            </path>
+            <path d="M0,0 L-150,0" stroke="#FF9900" stroke-width="2" stroke-dasharray="2,3">
+                <animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.8s" repeatCount="indefinite"/>
+            </path>
+            <path d="M0,0 L150,0" stroke="#FF9900" stroke-width="2" stroke-dasharray="2,3">
+                <animate attributeName="opacity" values="0.7;0.2;0.7" dur="2.1s" repeatCount="indefinite"/>
+            </path>
+        </g>
+        
+        <!-- Pulse Animation -->
+        <circle cx="0" cy="0" r="45" stroke="#FF9900" stroke-width="2" fill="none">
+            <animate attributeName="r" values="45;60;45" dur="3s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.8;0;0.8" dur="3s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+    
+    <!-- Route 53 -->
+    <g id="route53" transform="translate(400, 500)">
+        <rect x="-80" y="-30" width="160" height="60" rx="10" fill="url(#greenGradient)" />
+        <circle cx="-50" cy="0" r="10" fill="#F1F5F9" opacity="0.5" />
+        <circle cx="0" cy="0" r="10" fill="#F1F5F9" opacity="0.5" />
+        <circle cx="50" cy="0" r="10" fill="#F1F5F9" opacity="0.5" />
+        
+        <!-- Connection Lines -->
+        <path d="M0,-30 L0,-100" stroke="#10B981" stroke-width="2" stroke-dasharray="5,5" opacity="0.7" />
+        <path d="M-80,0 L-300,0" stroke="#10B981" stroke-width="2" stroke-dasharray="5,5" opacity="0.7" />
+        <path d="M80,0 L300,0" stroke="#10B981" stroke-width="2" stroke-dasharray="5,5" opacity="0.7" />
+        
+        <!-- Pulse Animation -->
+        <circle cx="0" cy="0" r="90" stroke="#10B981" stroke-width="1" fill="none">
+            <animate attributeName="r" values="90;110;90" dur="4s" repeatCount="indefinite"/>
+            <animate attributeName="opacity" values="0.7;0;0.7" dur="4s" repeatCount="indefinite"/>
+        </circle>
+    </g>
+    
+    <!-- Data Flow Animations -->
+    <g id="dataFlow">
+        <!-- Region 1 to CloudFront -->
+        <circle cx="250" cy="200" r="3" fill="#FFFFFF">
+            <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+            <animateMotion
+                path="M0,0 L150,-100"
+                dur="2s"
+                repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Region 2 to CloudFront -->
+        <circle cx="550" cy="200" r="3" fill="#FFFFFF">
+            <animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite"/>
+            <animateMotion
+                path="M0,0 L-150,-100"
+                dur="2.5s"
+                repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Route53 to Region 1 -->
+        <circle cx="250" cy="500" r="3" fill="#FFFFFF">
+            <animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite"/>
+            <animateMotion
+                path="M0,0 L0,-150"
+                dur="2.2s"
+                repeatCount="indefinite"/>
+        </circle>
+        
+        <!-- Route53 to Region 2 -->
+        <circle cx="550" cy="500" r="3" fill="#FFFFFF">
+            <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/>
+            <animateMotion
+                path="M0,0 L0,-150"
+                dur="1.8s"
+                repeatCount="indefinite"/>
+        </circle>
+    </g>
+    
+    <!-- Title -->
+    <text x="400" y="570" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="white" text-anchor="middle">
+        AWS Architecture
+    </text>
+</svg>

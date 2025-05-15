@@ -62,7 +62,7 @@ export function Navbar({ activeSection }: NavbarProps) {
         <div className="flex items-center space-x-2">
           {/* Social Links */}
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/tintrungle/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
